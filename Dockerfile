@@ -1,4 +1,4 @@
-FROM node:14
+FROM node:14-alpine
 
 # create working directory and copy package.json and package-lock.json
 WORKDIR /usr/src/app
