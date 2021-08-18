@@ -4,9 +4,19 @@
 
     <body>
         <h1>Hello World</h1>
-        <button>get number</button>
+        <button onclick="getNumber()">get number</button>
 
         <script>
+            function getNumber() {
+                let request = new XMLHttpRequest();
+                request.onreadystatechange = function() {
+                    if (request.readyState === XMLHttpRequest.DONE) {
+                        document.getElementsByTagName("button")[0].textContent = request.response;
+                    }
+                };
+                request.open("GET", "/random", true);
+                request.send();
+            }
         </script>
     </body>
 </html>
