@@ -9,7 +9,7 @@ app.get('/ping', function(req, res) {
     res.send('pong');
 });
 app.get('/random', function(req, res) {
-    res.send("5");
+    res.send("5000 thousand");
 });
 
 app.listen(process.env.PORT || 80, function(err) {
