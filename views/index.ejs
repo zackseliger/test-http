@@ -11,7 +11,9 @@
                 let request = new XMLHttpRequest();
                 request.onreadystatechange = function() {
                     if (request.readyState === XMLHttpRequest.DONE) {
-                        document.getElementsByTagName("button")[0].textContent = request.response;
+                        let elem = document.createElement('p');
+                        elem.innerHTML = "hiiii!!!";
+                        document.body.appendChild(elem);
                     }
                 };
                 request.open("GET", "/random", true);
