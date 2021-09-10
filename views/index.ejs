@@ -12,7 +12,7 @@
                 request.onreadystatechange = function() {
                     if (request.readyState === XMLHttpRequest.DONE) {
                         let elem = document.createElement('p');
-                        elem.innerHTML = request.response;
+                        elem.innerHTML = request.response+"... hi!";
                         document.body.appendChild(elem);
                     }
                 };
