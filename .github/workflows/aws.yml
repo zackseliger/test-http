@@ -71,7 +71,7 @@ jobs:
         token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
 
     - name: Drop image URL into manifest.yaml
-      run: sed -i 's/<IMAGE>/${{ steps.build-image.outputs.image }}/g' $GITHUB_WORKSPACE/config/manifest.yml
+      run: sed -i 's|<IMAGE>|${{ steps.build-image.outputs.image }}|g' $GITHUB_WORKSPACE/config/manifest.yml
 
     - name: Get kubeconfig from our cluster
       env:
